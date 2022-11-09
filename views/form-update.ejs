@@ -1,0 +1,12 @@
+<h1>Cập nhật Custommer</h1>
+<form action="/update" method="POST"> 
+    DeviceID: <input type="text" name="id"value="<%= user.id%>"><br>
+    LatLong: <input type="text" name="phone" value="<%= user.phone%>"><br>
+    Role: <input type="text" name="password"value="<%= user.password%>"><br>
+    OpenHour: <input type="text" name="typeRegister"value="<%= user.typeRegister%>"><br>
+    DefaultAccount: <input type="text" name="defaultAccount" value="<%= user.defaultAccount%>"><br>
+    TokenLogin: <input type="text" name="tokenLogin"value="<%= user.tokenLogin%>"><br>
+    FcmTokens: <input type="text" name="fcmTokens"value="<%= user.fcmTokens%>"><br>
+    <button type="submit">Cập nhật Custommer</button> 
+</form>
+<!-- User(DeviceID,Phone,Password,TypeRegister,TokenLogin,FcmTokens) -->

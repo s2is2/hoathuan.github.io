@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custommers</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <!-- User(DeviceID,Phone,Password,TypeRegister,TokenLogin,FcmTokens) -->
+  <body>
+    <h1> Custommer </h1>
+    <a href="form-add"><button>Thêm Custommer</button></a><br /><br />
+    <table border="1">
+      <tr>
+        <th>DeviceID</th>
+        <th>LatLong</th>
+        <th>Role</th>
+        <th>OpenHour</th>
+        <th>DefaultAccount</th>
+        <th>TokenLogin</th>
+        <th>FcmTokens</th>
+      </tr>
+      <% users.forEach(item => { %>
+      <tr>
+        <td><%= item._id %></td>
+        <td><%= item.phone %></td>
+        <td><%= item.password %></td>
+        <td><%= item.defaultAccount %></td>
+        <td><%= item.typeRegister %></td>
+        <td><%= item.tokenLogin %></td>
+        <td><%= item.fcmTokens %></td>
+        <td>
+          <a href="/form-update/<%= item._id %>">Update</a>||<a
+            href="/form-delete/<%= item._id %>"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
